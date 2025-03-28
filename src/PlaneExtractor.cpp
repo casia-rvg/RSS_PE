@@ -1068,8 +1068,8 @@ void PlaneExtractor::fitPlane(const std::vector<Eigen::Vector3d>& pts3D, Eigen::
     }
 
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>());
-    cloud->width    = static_cast<uint32_t>(pts3D.size());
-    cloud->height   = 1;
+    cloud->width = static_cast<uint32_t>(pts3D.size());
+    cloud->height = 1;
     cloud->is_dense = false;
     cloud->points.resize(cloud->width * cloud->height);
 
@@ -1105,7 +1105,7 @@ void PlaneExtractor::fitPlane(const std::vector<Eigen::Vector3d>& pts3D, Eigen::
         return;
     }
 
-    normal   = Eigen::Vector3d(a, b, c) / normN;
+    normal = Eigen::Vector3d(a, b, c) / normN;
     distance = d / normN;
 }
 
