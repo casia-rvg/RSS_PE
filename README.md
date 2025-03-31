@@ -49,6 +49,26 @@ make -j
 
 If the build completes successfully, the main executable (`rss_pe`) will be generated in the `build` directory.
 
+## Directory Structure
+
+Below is a brief overview of the repository structure after compilation:
+
+```
+RSS_PE/
+├── build/                # Contains build outputs and the final executable (rss_pe)
+├── CMakeLists.txt        # CMake configuration file
+├── examples/
+│   ├── euroc_timestamps/
+│   │   ├── V101.txt      # Example timestamps for the EuRoC V1_01_easy sequence
+│   │   └── ...           # Additional timestamp files
+│   └── EuRoC.yaml        # Algorithm parameter file for the EuRoC dataset
+├── img/                  # Image resource
+├── include/              # Header files for core functionalities
+├── main.cpp              # Main entry point of the plane extraction module
+├── README.md             # Project introduction and usage guide
+└── src/                  # Source files implementing the core functionalities
+```
+
 ## Usage
 
 Run the plane extraction module with:
